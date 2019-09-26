@@ -1,0 +1,6 @@
+.DS_Store
+.env.local
+.idea
+.nyc_output
+coverage
+node_modules

@@ -1,0 +1,56 @@
+{
+  "name": "bearly-functional",
+  "description": "a repo of functions, some functional, some bearly 🐻",
+  "version": "0.0.1",
+  "main": "dist/bearly-functional.cjs.js",
+  "module": "dist/bearly-functional.esm.js",
+  "browser": "dist/bearly-functional.umd.js",
+  "scripts": {
+    "example:cjs": "node ./example/node-cjs.js",
+    "example:esm": "node -r esm ./example/node-esm.js",
+    "example:umd": "node ./example/node-umd.js",
+    "build": "cross-env BABEL_ENV=build rollup -c",
+    "coverage": "npm run test && tap --coverage-report=lcov",
+    "test": "tap --reporter=classic",
+    "test:output-tap": "tap --reporter=tap --no-coverage",
+    "test:watch": "tap --reporter=specy --watch",
+    "doc": "rimraf docs/* & npm run doc:html & npm run doc:md",
+    "doc:html": "documentation build ./src/index.js -f html -o docs",
+    "doc:md": "documentation build src/index.js -f md -o docs/documentation.md",
+    "prepublishOnly": "npm run test && npm run doc && npm run build",
+    "release": "np"
+  },
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "sanctuary": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "cross-env": "^6.0.0",
+    "documentation": "^12.1.2",
+    "esm": "^3.2.25",
+    "np": "^5.1.0",
+    "rimraf": "^3.0.0",
+    "riteway": "^6.1.0",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "tap": "^14.6.5"
+  },
+  "author": "puiutucutu",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puiutucutu/bearly-functional.git"
+  }
+}
