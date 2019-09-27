@@ -1,6 +1,7 @@
 .DS_Store
 .env.local
 .idea
+.package-lock.json
 .nyc_output
 coverage
 node_modules
