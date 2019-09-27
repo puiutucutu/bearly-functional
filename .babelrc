@@ -9,7 +9,7 @@
           "@babel/preset-env",
           {
             "targets": {
-              "browsers": ["ie >= 11"]
+              "browsers": ["defaults"]
             },
             "modules": false,
             "useBuiltIns": "usage",
