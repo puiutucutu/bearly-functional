@@ -7,6 +7,10 @@ a repo of functions, some functional, some bearly 🐻
 - bundling with `rollup` and transpiling with `babel`
 - builds `.cjs`, `.esm` and `.umd` files
 
+## Docs
+
+https://puiutucutu.github.io/bearly-functional/
+
 ## Install
 
 ```
