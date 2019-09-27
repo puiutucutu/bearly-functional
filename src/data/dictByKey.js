@@ -1,3 +1,5 @@
+import S from "sanctuary";
+
 /**
  * Takes a `key`, returns a function that expects an array of objects, finally
  * returns an object of unique keys.
@@ -18,7 +20,7 @@
  *   { id: 6, name: "James" },
  * ];
  *
- * dictByKey ("name") (persons); //=> {John: true, James: true, Jack: true}
+ * dictByKey ("name") (persons); //=> { John: true, James: true, Jack: true }
  *
  */
 const dictByKey = key => S.reduce

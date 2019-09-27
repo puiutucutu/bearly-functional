@@ -1,3 +1,5 @@
+import S from "sanctuary";
+
 /**
  * Takes a `key` and returns a function that expects an array of objects
  * (containing a property equal to `key`) that finally returns an Object<K,V>

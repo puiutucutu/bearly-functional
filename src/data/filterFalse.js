@@ -1,12 +1,12 @@
-import S from "sanctuary";
-import { empty } from "../conditions";
+import { isFalse } from "../conditions/isFalse";
 
 /**
- * filterFalse :: [a] -> [a]
+ * Removes elements of the array that evaluate to false.
  *
- * @param {*[]} xs
- * @return {*[]}
+ * filterFalse :: [*] -> [*]
+ *
+ * @return {Array}
  */
-const filterFalse = xs => S.filter (empty) (xs);
+const filterFalse = xs => Array.prototype.filter.call(xs, isFalse);
 
 export { filterFalse };

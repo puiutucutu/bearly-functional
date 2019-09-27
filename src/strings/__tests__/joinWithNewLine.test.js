@@ -1,12 +1,3 @@
-// import tap from "tap";
-// import { joinWithNewLine } from "../index";
-//
-// tap.test("joinWithNewLine()", function(t) {
-//   t.equal(joinWithNewLine(["hello", "world"]), "hello\r\nworld");
-//   t.equal(joinWithNewLine([]), "", "returns empty string when given empty array"); // prettier-ignore
-//   t.end();
-// });
-
 import { describe, Try } from "riteway";
 import { joinWithNewLine } from "../joinWithNewLine";
 

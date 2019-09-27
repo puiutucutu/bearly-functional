@@ -1,5 +1,19 @@
 import S from "sanctuary";
 
-const splitCommaRegex = S.splitOnRegex(/,/g); // String ->  [String]
+/**
+ * Returns array of substrings resulting from splitting the original string
+ * wherever a comma was found.
+ *
+ * splitComma :: String -> [String]
+ *
+ * @return {String}
+ * @example
+ *
+ * splitCommaRegex ("foo,bar,baz"); //=> ["foo", "bar", "baz"]
+ * splitCommaRegex ("foo, bar, baz"); //=> ["foo", " bar", " baz"]
+ * splitCommaRegex (""); //=> [""]
+ *
+ */
+const splitCommaRegex = S.splitOnRegex(/,/g);
 
 export { splitCommaRegex };

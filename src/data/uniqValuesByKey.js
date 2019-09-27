@@ -1,3 +1,4 @@
+import S from "sanctuary";
 import { dictByKey } from "./dictByKey";
 
 const keys = Object.keys;
