@@ -15712,17 +15712,19 @@ _export({ target: 'Array', proto: true, forced: !arrayMethodHasSpeciesSupport('f
 });
 
 /**
- * isFalse :: a -> Boolean
+ * isTruthy :: * -> Boolean
  *
- * @param {*} a
+ * @param {*} x
  * @return {Boolean}
+ * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ * @see @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
-var isFalse = function isFalse(a) {
-  return !!a;
+var isTruthy = function isTruthy(x) {
+  return !!x;
 };
 
 /**
- * Removes elements of the array that evaluate to false.
+ * Removes elements of the array that evaluate to false when coerced to Boolean.
  *
  * filterFalse :: [*] -> [*]
  *
@@ -15730,7 +15732,7 @@ var isFalse = function isFalse(a) {
  */
 
 var filterFalse = function filterFalse(xs) {
-  return Array.prototype.filter.call(xs, isFalse);
+  return Array.prototype.filter.call(xs, isTruthy);
 };
 
 // `Object.keys` method

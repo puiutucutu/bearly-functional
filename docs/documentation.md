@@ -10,7 +10,7 @@
     -   [Examples][6]
 -   [filterFalse][7]
     -   [Parameters][8]
--   [isFalse][9]
+-   [isTruthy][9]
     -   [Parameters][10]
 -   [uniqValuesByKey][11]
     -   [Parameters][12]
@@ -121,7 +121,7 @@ Returns **function (xs: [Array][47]&lt;T>): [Object][48]&lt;T&lt;K>, [Boolean][4
 
 ## filterFalse
 
-Removes elements of the array that evaluate to false.
+Removes elements of the array that evaluate to false when coerced to Boolean.
 
 filterFalse :: [*] -> [*]
 
@@ -131,13 +131,16 @@ filterFalse :: [*] -> [*]
 
 Returns **[Array][47]** 
 
-## isFalse
+## isTruthy
 
-isFalse :: a -> Boolean
+-   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][50]**
+-   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][50]**
+
+isTruthy :: \* -> Boolean
 
 ### Parameters
 
--   `a` **any** 
+-   `x` **any** 
 
 Returns **[Boolean][49]** 
 
@@ -170,10 +173,10 @@ Adds two numbers together.
 
 ### Parameters
 
--   `x` **[Number][50]** 
--   `y` **[Number][50]** 
+-   `x` **[Number][51]** 
+-   `y` **[Number][51]** 
 
-Returns **[Number][50]** The sum of adding two numbers.
+Returns **[Number][51]** The sum of adding two numbers.
 
 ## joinWithComma
 
@@ -230,8 +233,8 @@ replaceCommaWithWhitespace(",hello,world,"); //=> " hello world "
 
 ## replaceString
 
--   **See: {[https://sanctuary.js.org/#curry3}][51]**
--   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][52]**
+-   **See: {[https://sanctuary.js.org/#curry3}][52]**
+-   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][53]**
 
 A curried wrapper around the native `string.replace` function. Function is
 extracted from the sanctuary.js docs.
@@ -335,7 +338,7 @@ Returns **[String][46]**
 
 ## splitWhitespace
 
--   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][53]**
+-   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][54]**
 -   **See: All examples from @{splitSpace} and @{splitSpaceRegex} work in
       addition to all the remaining forms of whitespace characters.**
 
@@ -345,7 +348,7 @@ characters are found.
 This corresponds to all whitespace characters represented by the `\s`
 metacharacter in regex.
 
--   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][53]
+-   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][54]
 
 splitWhitespace :: String -> [String]
 
@@ -359,8 +362,8 @@ Returns **[String][46]**
 
 ## truncateSpace
 
--   **See: [https://stackoverflow.com/a/7151225/1727232][54]**
--   **See: [https://stackoverflow.com/a/1279878/1727232][55]**
+-   **See: [https://stackoverflow.com/a/7151225/1727232][55]**
+-   **See: [https://stackoverflow.com/a/1279878/1727232][56]**
 
 Truncates contiguous ASCII 32 `SPACE` chars into one.
 
@@ -376,7 +379,7 @@ Returns **[String][46]**
 
 ## truncateWhitespace
 
--   **See: [https://stackoverflow.com/a/1279874/1727232][56]**
+-   **See: [https://stackoverflow.com/a/1279874/1727232][57]**
 
 Truncates all whitespace chars to a single space char.
 
@@ -430,7 +433,7 @@ Returns **[String][46]**
 
 [8]: #parameters-2
 
-[9]: #isfalse
+[9]: #istruthy
 
 [10]: #parameters-3
 
@@ -512,16 +515,18 @@ Returns **[String][46]**
 
 [49]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[50]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[50]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 
-[51]: https://sanctuary.js.org/#curry3}
+[51]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[52]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
+[52]: https://sanctuary.js.org/#curry3}
 
-[53]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
+[53]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
 
-[54]: https://stackoverflow.com/a/7151225/1727232
+[54]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
 
-[55]: https://stackoverflow.com/a/1279878/1727232
+[55]: https://stackoverflow.com/a/7151225/1727232
 
-[56]: https://stackoverflow.com/a/1279874/1727232
+[56]: https://stackoverflow.com/a/1279878/1727232
+
+[57]: https://stackoverflow.com/a/1279874/1727232
