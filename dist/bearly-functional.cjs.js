@@ -15,11 +15,37 @@ var identity = function identity(x) {
   return x;
 }; // a -> a
 
+/**
+ * isTruthy :: * -> Boolean
+ *
+ * @param {*} x
+ * @return {Boolean}
+ * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ * @see @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ */
+var isTruthy = function isTruthy(x) {
+  return !!x;
+};
+
+/**
+ * isFalsy :: * -> Boolean
+ *
+ * @return {Boolean}
+ * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ * @see @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ */
+
+var isFalsy = function isFalsy(x) {
+  return isTruthy(x) === false;
+};
+
 
 
 var index = /*#__PURE__*/Object.freeze({
 	empty: empty,
-	identity: identity
+	identity: identity,
+	isFalsy: isFalsy,
+	isTruthy: isTruthy
 });
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -15718,18 +15744,6 @@ _export({ target: 'Array', proto: true, forced: !arrayMethodHasSpeciesSupport('f
 });
 
 /**
- * isTruthy :: * -> Boolean
- *
- * @param {*} x
- * @return {Boolean}
- * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
- * @see @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
- */
-var isTruthy = function isTruthy(x) {
-  return !!x;
-};
-
-/**
  * Removes elements of the array that evaluate to false when coerced to Boolean.
  *
  * filterFalse :: [*] -> [*]
@@ -17937,6 +17951,8 @@ exports.empty = empty;
 exports.filterFalse = filterFalse;
 exports.getPrototype = getPrototype;
 exports.identity = identity;
+exports.isFalsy = isFalsy;
+exports.isTruthy = isTruthy;
 exports.joinWithComma = joinWithComma;
 exports.joinWithNewLine = joinWithNewLine;
 exports.math = index$2;
