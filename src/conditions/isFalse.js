@@ -1,9 +1,9 @@
 /**
- * isFalse :: a -> Boolean
+ * isFalse :: * -> Boolean
  *
- * @param {*} a
+ * @param {*} x
  * @return {Boolean}
  */
-const isFalse = a => !!a;
+const isFalse = x => !!x;
 
 export { isFalse };
