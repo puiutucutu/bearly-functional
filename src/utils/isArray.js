@@ -1,3 +1,5 @@
+import { getPrototype } from "./getPrototype";
+
 /**
  * @param {Array} xs
  * @return {Boolean}
@@ -5,12 +7,12 @@
  *
  * isArray([1,2,3]); //=> true
  */
-import { getPrototype } from "./getPrototype";
-
-const isArray = xs =>
-  Array.hasOwnProperty("isArray")
-    ? Array.isArray(xs)
-    : getPrototype(xs) === "[object Array]"
-  ;
+const isArray = xs => {
+  if (Array.hasOwnProperty("isArray")) {
+    return Array.isArray(xs);
+  } else {
+    return getPrototype(xs) === "[object Array]";
+  }
+};
 
 export { isArray };
