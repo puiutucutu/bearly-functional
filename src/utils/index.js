@@ -1,3 +1,4 @@
 import { getPrototype } from "./getPrototype";
+import { isArray } from "./isArray";
 
-export { getPrototype };
+export { getPrototype, isArray };
