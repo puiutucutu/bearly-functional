@@ -26,12 +26,7 @@ module.exports = [
         sourcemap: true
       }
     ],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      json(),
-      ...babelPlugin
-    ]
+    plugins: [...babelPlugin, nodeResolve(), commonjs(), json()]
   },
   {
     input: "src/index.js",
@@ -41,12 +36,6 @@ module.exports = [
       name: "bf",
       sourcemap: true
     },
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      json(),
-      ...babelPlugin,
-      terser()
-    ]
+    plugins: [...babelPlugin, nodeResolve(), commonjs(), json(), terser()]
   }
 ];
