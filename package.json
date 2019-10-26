@@ -18,11 +18,15 @@
     "doc:html": "documentation build ./src/index.js -f html -o docs",
     "doc:md": "documentation build src/index.js -f md -o docs/documentation.md",
     "prepublishOnly": "npm run test && npm run doc && npm run build",
+    "preversion": "npm run test",
+    "version": "npm run doc && git add -A docs",
+    "postversion": "git push && git push --tags",
     "release": "np"
   },
   "files": [
-    "/dist",
-    "/src"
+    "dist",
+    "src",
+    "!/src/**/__tests__"
   ],
   "dependencies": {
     "core-js": "^3.2.1",
