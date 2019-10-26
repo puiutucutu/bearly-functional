@@ -2,51 +2,91 @@
 
 ### Table of Contents
 
--   [dictGroupByKey][1]
+-   [isFalsy][1]
     -   [Parameters][2]
-    -   [Examples][3]
--   [dictByKey][4]
-    -   [Parameters][5]
-    -   [Examples][6]
--   [filterFalse][7]
-    -   [Parameters][8]
--   [isTruthy][9]
-    -   [Parameters][10]
--   [uniqValuesByKey][11]
+-   [isTruthy][3]
+    -   [Parameters][4]
+-   [dictGroupByKey][5]
+    -   [Parameters][6]
+    -   [Examples][7]
+-   [dictByKey][8]
+    -   [Parameters][9]
+    -   [Examples][10]
+-   [filterFalse][11]
     -   [Parameters][12]
-    -   [Examples][13]
--   [add][14]
-    -   [Parameters][15]
--   [joinWithComma][16]
+-   [uniqValuesByKey][13]
+    -   [Parameters][14]
+    -   [Examples][15]
+-   [add][16]
     -   [Parameters][17]
--   [joinWithNewLine][18]
+-   [append][18]
     -   [Parameters][19]
--   [removeCommas][20]
-    -   [Parameters][21]
-    -   [Examples][22]
--   [replaceCommaWithWhitespace][23]
-    -   [Examples][24]
--   [replaceString][25]
-    -   [Examples][26]
--   [splitComma][27]
-    -   [Examples][28]
--   [splitCommaRegex][29]
-    -   [Examples][30]
--   [splitNewLines][31]
-    -   [Examples][32]
--   [splitSpace][33]
+    -   [Examples][20]
+-   [joinWithComma][21]
+    -   [Parameters][22]
+-   [joinWithNewLine][23]
+    -   [Parameters][24]
+-   [removeCommas][25]
+    -   [Parameters][26]
+    -   [Examples][27]
+-   [replaceCommaWithWhitespace][28]
+    -   [Examples][29]
+-   [replaceString][30]
+    -   [Examples][31]
+-   [showEither][32]
+    -   [Parameters][33]
     -   [Examples][34]
--   [splitSpaceRegex][35]
+-   [splitComma][35]
     -   [Examples][36]
--   [splitWhitespace][37]
+-   [splitCommaRegex][37]
     -   [Examples][38]
--   [truncateSpace][39]
+-   [splitNewLines][39]
     -   [Examples][40]
--   [truncateWhitespace][41]
+-   [splitSpace][41]
     -   [Examples][42]
--   [getPrototype][43]
-    -   [Parameters][44]
-    -   [Examples][45]
+-   [splitSpaceRegex][43]
+    -   [Examples][44]
+-   [splitWhitespace][45]
+    -   [Examples][46]
+-   [truncateSpace][47]
+    -   [Examples][48]
+-   [truncateWhitespace][49]
+    -   [Examples][50]
+-   [getPrototype][51]
+    -   [Parameters][52]
+    -   [Examples][53]
+-   [isArray][54]
+    -   [Parameters][55]
+    -   [Examples][56]
+-   [toSignificantFigures][57]
+    -   [Parameters][58]
+    -   [Examples][59]
+
+## isFalsy
+
+-   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+-   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+
+isFalsy :: \* -> Boolean
+
+### Parameters
+
+-   `x`  
+
+Returns **[Boolean][61]** 
+
+## isTruthy
+
+-   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+-   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+
+isTruthy :: \* -> Boolean
+
+### Parameters
+
+-   `x` **any** 
+
+Returns **[Boolean][61]** 
 
 ## dictGroupByKey
 
@@ -57,7 +97,7 @@ array of elements from `xs` matching the `key` value.
 
 ### Parameters
 
--   `key` **[String][46]** 
+-   `key` **[String][62]** 
 
 ### Examples
 
@@ -91,7 +131,7 @@ dictGroupByKey ("name") (persons); //=> {John: Array[1], James: Array[3], Jack: 
 //
 ```
 
-Returns **function (xs: [Array][47]&lt;T>): [Object][48]&lt;K, V>** Where `K` is the key name used to group all the elements of `xs`.
+Returns **function (xs: [Array][63]&lt;T>): [Object][64]&lt;K, V>** Where `K` is the key name used to group all the elements of `xs`.
 
 ## dictByKey
 
@@ -100,7 +140,7 @@ returns an object of unique keys.
 
 ### Parameters
 
--   `key` **[String][46]** 
+-   `key` **[String][62]** 
 
 ### Examples
 
@@ -117,7 +157,7 @@ const persons = [
 dictByKey ("name") (persons); //=> { John: true, James: true, Jack: true }
 ```
 
-Returns **function (xs: [Array][47]&lt;T>): [Object][48]&lt;T&lt;K>, [Boolean][49]&lt;True>>** Where `K` is the key value on some T and `Boolean<True>` is placeholder.
+Returns **function (xs: [Array][63]&lt;T>): [Object][64]&lt;T&lt;K>, [Boolean][61]&lt;True>>** Where `K` is the key value on some T and `Boolean<True>` is placeholder.
 
 ## filterFalse
 
@@ -129,26 +169,13 @@ filterFalse :: [*] -> [*]
 
 -   `xs`  
 
-Returns **[Array][47]** 
-
-## isTruthy
-
--   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][50]**
--   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][50]**
-
-isTruthy :: \* -> Boolean
-
-### Parameters
-
--   `x` **any** 
-
-Returns **[Boolean][49]** 
+Returns **[Array][63]** 
 
 ## uniqValuesByKey
 
 ### Parameters
 
--   `key` **[String][46]** 
+-   `key` **[String][62]** 
 
 ### Examples
 
@@ -165,7 +192,7 @@ const persons = [
 uniqValuesByKey ("name") (persons); //=> ["John", "James", "Jack"]
 ```
 
-Returns **function (xs: [Array][47]&lt;T>): [Array][47]&lt;[String][46]>** 
+Returns **function (xs: [Array][63]&lt;T>): [Array][63]&lt;[String][62]>** 
 
 ## add
 
@@ -173,32 +200,46 @@ Adds two numbers together.
 
 ### Parameters
 
--   `x` **[Number][51]** 
--   `y` **[Number][51]** 
+-   `x` **[Number][65]** 
+-   `y` **[Number][65]** 
 
-Returns **[Number][51]** The sum of adding two numbers.
+Returns **[Number][65]** The sum of adding two numbers.
+
+## append
+
+### Parameters
+
+-   `text` **[String][62]** 
+
+### Examples
+
+```javascript
+append ("Hello ") ("world"); //=> "Hello world"
+```
+
+Returns **function (target: [String][62]): [String][62]** 
 
 ## joinWithComma
 
 ### Parameters
 
--   `xs` **[Array][47]&lt;[String][46]>** 
+-   `xs` **[Array][63]&lt;[String][62]>** 
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## joinWithNewLine
 
 ### Parameters
 
--   `xs` **[Array][47]&lt;[String][46]>** 
+-   `xs` **[Array][63]&lt;[String][62]>** 
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## removeCommas
 
 ### Parameters
 
--   `x` **[String][46]** 
+-   `x` **[String][62]** 
 
 ### Examples
 
@@ -208,7 +249,7 @@ removeCommas("hello, world"); //=> "hello world"
 removeCommas("a,b,c"); //=> abc
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## replaceCommaWithWhitespace
 
@@ -220,7 +261,7 @@ string will be replaced with a whitespace but will not be trimmed.
 
 replaceCommaWithWhitespace :: String -> String
 
-Type: (any | [Array][47]&lt;any>)
+Type: (any | [Array][63]&lt;any>)
 
 ### Examples
 
@@ -233,8 +274,8 @@ replaceCommaWithWhitespace(",hello,world,"); //=> " hello world "
 
 ## replaceString
 
--   **See: {[https://sanctuary.js.org/#curry3}][52]**
--   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][53]**
+-   **See: {[https://sanctuary.js.org/#curry3}][66]**
+-   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][67]**
 
 A curried wrapper around the native `string.replace` function. Function is
 extracted from the sanctuary.js docs.
@@ -249,6 +290,25 @@ replaceString :: (String -> (String -> String)) -> String
 replaceString ("bar") ("") ("foo bar baz"); //=> "foo  bar" (note the double space)
 replaceString (/a/gi) ("") ("foo bar baz"); //=> "foo br bz"
 ```
+
+## showEither
+
+showEither :: String -> String -> String
+
+### Parameters
+
+-   `fallback` **[String][62]** 
+
+### Examples
+
+```javascript
+showEither("n/a")("blue"); //=> "blue"
+showEither("n/a")(null);   //=> "n/a"
+showEither("n/a")(false);  //=> "n/a"
+showEither("n/a")(0);      //=> "n/a"
+```
+
+Returns **function (x: [String][62]): [String][62]** 
 
 ## splitComma
 
@@ -265,7 +325,7 @@ splitComma ("foo, bar, baz"); //=> ["foo", " bar", " baz"]
 splitComma (""); //=> [""]
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## splitCommaRegex
 
@@ -282,7 +342,7 @@ splitCommaRegex ("foo, bar, baz"); //=> ["foo", " bar", " baz"]
 splitCommaRegex (""); //=> [""]
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## splitNewLines
 
@@ -300,7 +360,7 @@ splitNewLines ("hello \n \n \n world"); //=> ["hello ", " ", " ", " world"]
 splitNewLines (""); //=> [""]
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## splitSpace
 
@@ -317,7 +377,7 @@ splitSpace ("hello   world"); //=> ["hello", "", "", "world"]
 splitSpace (""); //=> [""]
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## splitSpaceRegex
 
@@ -334,11 +394,11 @@ splitSpaceRegex ("hello   world"); //=> ["hello", "", "", "world"]
 splitSpaceRegex (""); //=> [""]
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## splitWhitespace
 
--   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][54]**
+-   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][68]**
 -   **See: All examples from @{splitSpace} and @{splitSpaceRegex} work in
       addition to all the remaining forms of whitespace characters.**
 
@@ -348,7 +408,7 @@ characters are found.
 This corresponds to all whitespace characters represented by the `\s`
 metacharacter in regex.
 
--   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][54]
+-   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][68]
 
 splitWhitespace :: String -> [String]
 
@@ -358,12 +418,12 @@ splitWhitespace :: String -> [String]
 splitWhitespace ("hello \t world"); //=> "hello", "", "", "world"
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## truncateSpace
 
--   **See: [https://stackoverflow.com/a/7151225/1727232][55]**
--   **See: [https://stackoverflow.com/a/1279878/1727232][56]**
+-   **See: [https://stackoverflow.com/a/7151225/1727232][69]**
+-   **See: [https://stackoverflow.com/a/1279878/1727232][70]**
 
 Truncates contiguous ASCII 32 `SPACE` chars into one.
 
@@ -375,11 +435,11 @@ truncateSpace :: String -> String
 truncateSpace ("hello   world"); //=> "hello world"
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## truncateWhitespace
 
--   **See: [https://stackoverflow.com/a/1279874/1727232][57]**
+-   **See: [https://stackoverflow.com/a/1279874/1727232][71]**
 
 Truncates all whitespace chars to a single space char.
 
@@ -392,7 +452,7 @@ truncateWhitespace ("hello   world"); //=> "hello world"
 truncateWhitespace ("foo \t \v bar"); //=> "foo bar"
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
 ## getPrototype
 
@@ -415,118 +475,177 @@ getPrototype(void 0);    //=> "[object Undefined]"
 getPrototype();          //=> "[object Undefined]"
 ```
 
-Returns **[String][46]** 
+Returns **[String][62]** 
 
-[1]: #dictgroupbykey
+## isArray
+
+### Parameters
+
+-   `xs` **[Array][63]** 
+
+### Examples
+
+```javascript
+isArray([1,2,3]); //=> true
+```
+
+Returns **[Boolean][61]** 
+
+## toSignificantFigures
+
+### Parameters
+
+-   `figures`  
+
+### Examples
+
+```javascript
+toSignificantFigures (2) ("abc"); //=> false
+toSignificantFigures (2) (100.999); //=> "100.99"
+```
+
+Returns **function (target: [String][62]): [String][62]** False when the target cannot be
+  parsed, otherwise the string representation of the number rounded to
+  significant figures.
+
+[1]: #isfalsy
 
 [2]: #parameters
 
-[3]: #examples
+[3]: #istruthy
 
-[4]: #dictbykey
+[4]: #parameters-1
 
-[5]: #parameters-1
+[5]: #dictgroupbykey
 
-[6]: #examples-1
+[6]: #parameters-2
 
-[7]: #filterfalse
+[7]: #examples
 
-[8]: #parameters-2
+[8]: #dictbykey
 
-[9]: #istruthy
+[9]: #parameters-3
 
-[10]: #parameters-3
+[10]: #examples-1
 
-[11]: #uniqvaluesbykey
+[11]: #filterfalse
 
 [12]: #parameters-4
 
-[13]: #examples-2
+[13]: #uniqvaluesbykey
 
-[14]: #add
+[14]: #parameters-5
 
-[15]: #parameters-5
+[15]: #examples-2
 
-[16]: #joinwithcomma
+[16]: #add
 
 [17]: #parameters-6
 
-[18]: #joinwithnewline
+[18]: #append
 
 [19]: #parameters-7
 
-[20]: #removecommas
+[20]: #examples-3
 
-[21]: #parameters-8
+[21]: #joinwithcomma
 
-[22]: #examples-3
+[22]: #parameters-8
 
-[23]: #replacecommawithwhitespace
+[23]: #joinwithnewline
 
-[24]: #examples-4
+[24]: #parameters-9
 
-[25]: #replacestring
+[25]: #removecommas
 
-[26]: #examples-5
+[26]: #parameters-10
 
-[27]: #splitcomma
+[27]: #examples-4
 
-[28]: #examples-6
+[28]: #replacecommawithwhitespace
 
-[29]: #splitcommaregex
+[29]: #examples-5
 
-[30]: #examples-7
+[30]: #replacestring
 
-[31]: #splitnewlines
+[31]: #examples-6
 
-[32]: #examples-8
+[32]: #showeither
 
-[33]: #splitspace
+[33]: #parameters-11
 
-[34]: #examples-9
+[34]: #examples-7
 
-[35]: #splitspaceregex
+[35]: #splitcomma
 
-[36]: #examples-10
+[36]: #examples-8
 
-[37]: #splitwhitespace
+[37]: #splitcommaregex
 
-[38]: #examples-11
+[38]: #examples-9
 
-[39]: #truncatespace
+[39]: #splitnewlines
 
-[40]: #examples-12
+[40]: #examples-10
 
-[41]: #truncatewhitespace
+[41]: #splitspace
 
-[42]: #examples-13
+[42]: #examples-11
 
-[43]: #getprototype
+[43]: #splitspaceregex
 
-[44]: #parameters-9
+[44]: #examples-12
 
-[45]: #examples-14
+[45]: #splitwhitespace
 
-[46]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[46]: #examples-13
 
-[47]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[47]: #truncatespace
 
-[48]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[48]: #examples-14
 
-[49]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[49]: #truncatewhitespace
 
-[50]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+[50]: #examples-15
 
-[51]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[51]: #getprototype
 
-[52]: https://sanctuary.js.org/#curry3}
+[52]: #parameters-12
 
-[53]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
+[53]: #examples-16
 
-[54]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
+[54]: #isarray
 
-[55]: https://stackoverflow.com/a/7151225/1727232
+[55]: #parameters-13
 
-[56]: https://stackoverflow.com/a/1279878/1727232
+[56]: #examples-17
 
-[57]: https://stackoverflow.com/a/1279874/1727232
+[57]: #tosignificantfigures
+
+[58]: #parameters-14
+
+[59]: #examples-18
+
+[60]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+
+[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[66]: https://sanctuary.js.org/#curry3}
+
+[67]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
+
+[68]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
+
+[69]: https://stackoverflow.com/a/7151225/1727232
+
+[70]: https://stackoverflow.com/a/1279878/1727232
+
+[71]: https://stackoverflow.com/a/1279874/1727232
