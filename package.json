@@ -30,28 +30,28 @@
     "!/src/**/__tests__"
   ],
   "dependencies": {
-    "core-js": "^3.2.1",
+    "core-js": "^3.3.4",
     "sanctuary": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "@babel/register": "^7.6.2",
-    "cross-env": "^6.0.0",
+    "cross-env": "^6.0.3",
     "documentation": "^12.1.2",
     "esm": "^3.2.25",
-    "np": "^5.1.0",
+    "np": "^5.1.1",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "riteway": "^6.1.0",
-    "rollup": "^1.10.1",
+    "rollup": "^1.25.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.1.2",
-    "tap": "^14.6.5"
+    "tap": "^14.8.2"
   },
   "author": "puiutucutu",
   "license": "ISC",
