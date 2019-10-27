@@ -16,8 +16,8 @@ import S from "sanctuary";
  * replaceString (/a/gi) ("") ("foo bar baz"); //=> "foo br bz"
  *
  */
-const replaceString = S.curry3(function(replace, replacer, replacee) {
-  return String.prototype.replace.call(replacee, replace, replacer);
+const replaceString = S.curry3(function(searchValue, replace, replacee) {
+  return String.prototype.replace.call(replacee, searchValue, replace);
 });
 
 export { replaceString };
