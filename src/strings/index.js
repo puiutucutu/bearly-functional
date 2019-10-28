@@ -1,10 +1,12 @@
 import { append } from "./append";
+import { capitalize } from "./capitalize";
 import { joinWithComma } from "./joinWithComma";
 import { joinWithNewLine } from "./joinWithNewLine";
 import { removeCommas } from "./removeCommas";
 import { replaceCommaWithWhitespace } from "./replaceCommaWithWhitespace";
 import { replaceString } from "./replaceString";
 import { showEither } from "./showEither";
+import { split } from "./split";
 import { splitComma } from "./splitComma";
 import { splitCommaRegex } from "./splitCommaRegex";
 import { splitNewLines } from "./splitNewLines";
@@ -16,12 +18,14 @@ import { truncateWhitespace } from "./truncateWhitespace";
 
 export {
   append,
+  capitalize,
   joinWithComma,
   joinWithNewLine,
   removeCommas,
   replaceCommaWithWhitespace,
   replaceString,
   showEither,
+  split,
   splitComma,
   splitCommaRegex,
   splitNewLines,

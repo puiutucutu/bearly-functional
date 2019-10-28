@@ -14,6 +14,6 @@ import S from "sanctuary";
  * splitComma (""); //=> [""]
  *
  */
-const splitComma = S.splitOn (","); // String -> [String]
+const splitComma = S.splitOn (",");
 
 export { splitComma };
