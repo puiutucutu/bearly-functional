@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>bearly-functional 0.1.0 | Documentation</title>
+  <title>bearly-functional 0.2.0 | Documentation</title>
   <meta name='description' content='a repo of functions, some functional, some bearly 🐻'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>bearly-functional</h3>
-          <div class='mb1'><code>0.1.0</code></div>
+          <div class='mb1'><code>0.2.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -86,6 +86,26 @@
               
                 
                 <li><a
+                  href='#head'
+                  class="">
+                  head
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tail'
+                  class="">
+                  tail
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#add'
                   class="">
                   add
@@ -99,6 +119,26 @@
                   href='#append'
                   class="">
                   append
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#capitalize'
+                  class="">
+                  capitalize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#uppercase'
+                  class="">
+                  uppercase
                   
                 </a>
                 
@@ -159,6 +199,16 @@
                   href='#showeither'
                   class="">
                   showEither
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#split'
+                  class="">
+                  split
                   
                 </a>
                 
@@ -777,6 +827,144 @@ uniqValuesByKey (<span class="hljs-string">"name"</span>) (persons); <span class
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='head'>
+      head
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>head :: [a] -> a</p>
+
+    <div class='pre p1 fill-light mt0'>head</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tail'>
+      tail
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>tail :: [a] -> a</p>
+
+    <div class='pre p1 fill-light mt0'>tail</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='add'>
       add
     </h3>
@@ -909,6 +1097,142 @@ uniqValuesByKey (<span class="hljs-string">"name"</span>) (persons); <span class
       
       <pre class='p1 overflow-auto round fill-light'>append (<span class="hljs-string">"Hello "</span>) (<span class="hljs-string">"world"</span>); <span class="hljs-comment">//=&gt; "Hello world"</span></pre>
     
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='capitalize'>
+      capitalize
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>capitalize</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='uppercase'>
+      uppercase
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>uppercase</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        
+
+      
+    
+  
+
+  
+
   
 
   
@@ -1330,6 +1654,74 @@ showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-literal">nu
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-literal">false</span>);  <span class="hljs-comment">//=&gt; "n/a"</span>
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-number">0</span>);      <span class="hljs-comment">//=&gt; "n/a"</span></pre>
     
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='split'>
+      split
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>split</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        
+
+      
+    
+  
+
+  
+
   
 
   

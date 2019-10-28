@@ -17,55 +17,65 @@
 -   [uniqValuesByKey][13]
     -   [Parameters][14]
     -   [Examples][15]
--   [add][16]
+-   [head][16]
     -   [Parameters][17]
--   [append][18]
+-   [tail][18]
     -   [Parameters][19]
-    -   [Examples][20]
--   [joinWithComma][21]
-    -   [Parameters][22]
--   [joinWithNewLine][23]
-    -   [Parameters][24]
--   [removeCommas][25]
+-   [add][20]
+    -   [Parameters][21]
+-   [append][22]
+    -   [Parameters][23]
+    -   [Examples][24]
+-   [capitalize][25]
     -   [Parameters][26]
-    -   [Examples][27]
--   [replaceCommaWithWhitespace][28]
-    -   [Examples][29]
--   [replaceString][30]
-    -   [Examples][31]
--   [showEither][32]
-    -   [Parameters][33]
-    -   [Examples][34]
--   [splitComma][35]
-    -   [Examples][36]
--   [splitCommaRegex][37]
-    -   [Examples][38]
--   [splitNewLines][39]
-    -   [Examples][40]
--   [splitSpace][41]
+-   [uppercase][27]
+    -   [Parameters][28]
+-   [joinWithComma][29]
+    -   [Parameters][30]
+-   [joinWithNewLine][31]
+    -   [Parameters][32]
+-   [removeCommas][33]
+    -   [Parameters][34]
+    -   [Examples][35]
+-   [replaceCommaWithWhitespace][36]
+    -   [Examples][37]
+-   [replaceString][38]
+    -   [Examples][39]
+-   [showEither][40]
+    -   [Parameters][41]
     -   [Examples][42]
--   [splitSpaceRegex][43]
-    -   [Examples][44]
--   [splitWhitespace][45]
+-   [split][43]
+    -   [Parameters][44]
+-   [splitComma][45]
     -   [Examples][46]
--   [truncateSpace][47]
+-   [splitCommaRegex][47]
     -   [Examples][48]
--   [truncateWhitespace][49]
+-   [splitNewLines][49]
     -   [Examples][50]
--   [getPrototype][51]
-    -   [Parameters][52]
-    -   [Examples][53]
--   [isArray][54]
-    -   [Parameters][55]
+-   [splitSpace][51]
+    -   [Examples][52]
+-   [splitSpaceRegex][53]
+    -   [Examples][54]
+-   [splitWhitespace][55]
     -   [Examples][56]
--   [toSignificantFigures][57]
-    -   [Parameters][58]
-    -   [Examples][59]
+-   [truncateSpace][57]
+    -   [Examples][58]
+-   [truncateWhitespace][59]
+    -   [Examples][60]
+-   [getPrototype][61]
+    -   [Parameters][62]
+    -   [Examples][63]
+-   [isArray][64]
+    -   [Parameters][65]
+    -   [Examples][66]
+-   [toSignificantFigures][67]
+    -   [Parameters][68]
+    -   [Examples][69]
 
 ## isFalsy
 
--   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
--   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+-   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][70]**
+-   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][70]**
 
 isFalsy :: \* -> Boolean
 
@@ -73,12 +83,12 @@ isFalsy :: \* -> Boolean
 
 -   `x`  
 
-Returns **[Boolean][61]** 
+Returns **[Boolean][71]** 
 
 ## isTruthy
 
--   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
--   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][60]**
+-   **See: [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][70]**
+-   **See: @see [https://developer.mozilla.org/en-US/docs/Glossary/Truthy][70]**
 
 isTruthy :: \* -> Boolean
 
@@ -86,7 +96,7 @@ isTruthy :: \* -> Boolean
 
 -   `x` **any** 
 
-Returns **[Boolean][61]** 
+Returns **[Boolean][71]** 
 
 ## dictGroupByKey
 
@@ -97,7 +107,7 @@ array of elements from `xs` matching the `key` value.
 
 ### Parameters
 
--   `key` **[String][62]** 
+-   `key` **[String][72]** 
 
 ### Examples
 
@@ -131,7 +141,7 @@ dictGroupByKey ("name") (persons); //=> {John: Array[1], James: Array[3], Jack: 
 //
 ```
 
-Returns **function (xs: [Array][63]&lt;T>): [Object][64]&lt;K, V>** Where `K` is the key name used to group all the elements of `xs`.
+Returns **function (xs: [Array][73]&lt;T>): [Object][74]&lt;K, V>** Where `K` is the key name used to group all the elements of `xs`.
 
 ## dictByKey
 
@@ -140,7 +150,7 @@ returns an object of unique keys.
 
 ### Parameters
 
--   `key` **[String][62]** 
+-   `key` **[String][72]** 
 
 ### Examples
 
@@ -157,7 +167,7 @@ const persons = [
 dictByKey ("name") (persons); //=> { John: true, James: true, Jack: true }
 ```
 
-Returns **function (xs: [Array][63]&lt;T>): [Object][64]&lt;T&lt;K>, [Boolean][61]&lt;True>>** Where `K` is the key value on some T and `Boolean<True>` is placeholder.
+Returns **function (xs: [Array][73]&lt;T>): [Object][74]&lt;T&lt;K>, [Boolean][71]&lt;True>>** Where `K` is the key value on some T and `Boolean<True>` is placeholder.
 
 ## filterFalse
 
@@ -169,13 +179,13 @@ filterFalse :: [*] -> [*]
 
 -   `xs`  
 
-Returns **[Array][63]** 
+Returns **[Array][73]** 
 
 ## uniqValuesByKey
 
 ### Parameters
 
--   `key` **[String][62]** 
+-   `key` **[String][72]** 
 
 ### Examples
 
@@ -192,7 +202,27 @@ const persons = [
 uniqValuesByKey ("name") (persons); //=> ["John", "James", "Jack"]
 ```
 
-Returns **function (xs: [Array][63]&lt;T>): [Array][63]&lt;[String][62]>** 
+Returns **function (xs: [Array][73]&lt;T>): [Array][73]&lt;[String][72]>** 
+
+## head
+
+head :: [a] -> a
+
+### Parameters
+
+-   `xs` **[Array][73]** 
+
+Returns **any** 
+
+## tail
+
+tail :: [a] -> a
+
+### Parameters
+
+-   `xs` **[Array][73]&lt;any>** 
+
+Returns **[Array][73]&lt;any>** 
 
 ## add
 
@@ -200,16 +230,16 @@ Adds two numbers together.
 
 ### Parameters
 
--   `x` **[Number][65]** 
--   `y` **[Number][65]** 
+-   `x` **[Number][75]** 
+-   `y` **[Number][75]** 
 
-Returns **[Number][65]** The sum of adding two numbers.
+Returns **[Number][75]** The sum of adding two numbers.
 
 ## append
 
 ### Parameters
 
--   `text` **[String][62]** 
+-   `text` **[String][72]** 
 
 ### Examples
 
@@ -217,29 +247,45 @@ Returns **[Number][65]** The sum of adding two numbers.
 append ("Hello ") ("world"); //=> "Hello world"
 ```
 
-Returns **function (target: [String][62]): [String][62]** 
+Returns **function (target: [String][72]): [String][72]** 
+
+## capitalize
+
+### Parameters
+
+-   `x` **[String][72]** 
+
+Returns **[String][72]** 
+
+## uppercase
+
+### Parameters
+
+-   `x` **[String][72]** 
+
+Returns **[String][72]** 
 
 ## joinWithComma
 
 ### Parameters
 
--   `xs` **[Array][63]&lt;[String][62]>** 
+-   `xs` **[Array][73]&lt;[String][72]>** 
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## joinWithNewLine
 
 ### Parameters
 
--   `xs` **[Array][63]&lt;[String][62]>** 
+-   `xs` **[Array][73]&lt;[String][72]>** 
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## removeCommas
 
 ### Parameters
 
--   `x` **[String][62]** 
+-   `x` **[String][72]** 
 
 ### Examples
 
@@ -249,7 +295,7 @@ removeCommas("hello, world"); //=> "hello world"
 removeCommas("a,b,c"); //=> abc
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## replaceCommaWithWhitespace
 
@@ -261,7 +307,7 @@ string will be replaced with a whitespace but will not be trimmed.
 
 replaceCommaWithWhitespace :: String -> String
 
-Type: (any | [Array][63]&lt;any>)
+Type: (any | [Array][73]&lt;any>)
 
 ### Examples
 
@@ -274,8 +320,8 @@ replaceCommaWithWhitespace(",hello,world,"); //=> " hello world "
 
 ## replaceString
 
--   **See: {[https://sanctuary.js.org/#curry3}][66]**
--   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][67]**
+-   **See: {[https://sanctuary.js.org/#curry3}][76]**
+-   **See: {[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}][77]**
 
 A curried wrapper around the native `string.replace` function. Function is
 extracted from the sanctuary.js docs.
@@ -297,7 +343,7 @@ showEither :: String -> String -> String
 
 ### Parameters
 
--   `fallback` **[String][62]** 
+-   `fallback` **[String][72]** 
 
 ### Examples
 
@@ -310,8 +356,16 @@ showEither("n/a")(false);  //=> "n/a"
 showEither("n/a")(0);      //=> "n/a"
 ```
 
-Returns **function (x: [String][62]): [String][62]** The `fallback` will always be returned
+Returns **function (x: [String][72]): [String][72]** The `fallback` will always be returned
   when an empty string or non-string values are supplied for `x`.
+
+## split
+
+### Parameters
+
+-   `x` **[String][72]** 
+
+Returns **[Array][73]&lt;[String][72]>** 
 
 ## splitComma
 
@@ -328,7 +382,7 @@ splitComma ("foo, bar, baz"); //=> ["foo", " bar", " baz"]
 splitComma (""); //=> [""]
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## splitCommaRegex
 
@@ -345,7 +399,7 @@ splitCommaRegex ("foo, bar, baz"); //=> ["foo", " bar", " baz"]
 splitCommaRegex (""); //=> [""]
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## splitNewLines
 
@@ -363,7 +417,7 @@ splitNewLines ("hello \n \n \n world"); //=> ["hello ", " ", " ", " world"]
 splitNewLines (""); //=> [""]
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## splitSpace
 
@@ -380,7 +434,7 @@ splitSpace ("hello   world"); //=> ["hello", "", "", "world"]
 splitSpace (""); //=> [""]
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## splitSpaceRegex
 
@@ -397,11 +451,11 @@ splitSpaceRegex ("hello   world"); //=> ["hello", "", "", "world"]
 splitSpaceRegex (""); //=> [""]
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## splitWhitespace
 
--   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][68]**
+-   **See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][78]**
 -   **See: All examples from @{splitSpace} and @{splitSpaceRegex} work in
       addition to all the remaining forms of whitespace characters.**
 
@@ -411,7 +465,7 @@ characters are found.
 This corresponds to all whitespace characters represented by the `\s`
 metacharacter in regex.
 
--   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][68]
+-   see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space][78]
 
 splitWhitespace :: String -> [String]
 
@@ -421,12 +475,12 @@ splitWhitespace :: String -> [String]
 splitWhitespace ("hello \t world"); //=> "hello", "", "", "world"
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## truncateSpace
 
--   **See: [https://stackoverflow.com/a/7151225/1727232][69]**
--   **See: [https://stackoverflow.com/a/1279878/1727232][70]**
+-   **See: [https://stackoverflow.com/a/7151225/1727232][79]**
+-   **See: [https://stackoverflow.com/a/1279878/1727232][80]**
 
 Truncates contiguous ASCII 32 `SPACE` chars into one.
 
@@ -438,11 +492,11 @@ truncateSpace :: String -> String
 truncateSpace ("hello   world"); //=> "hello world"
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## truncateWhitespace
 
--   **See: [https://stackoverflow.com/a/1279874/1727232][71]**
+-   **See: [https://stackoverflow.com/a/1279874/1727232][81]**
 
 Truncates all whitespace chars to a single space char.
 
@@ -455,7 +509,7 @@ truncateWhitespace ("hello   world"); //=> "hello world"
 truncateWhitespace ("foo \t \v bar"); //=> "foo bar"
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## getPrototype
 
@@ -478,13 +532,13 @@ getPrototype(void 0);    //=> "[object Undefined]"
 getPrototype();          //=> "[object Undefined]"
 ```
 
-Returns **[String][62]** 
+Returns **[String][72]** 
 
 ## isArray
 
 ### Parameters
 
--   `xs` **[Array][63]** 
+-   `xs` **[Array][73]** 
 
 ### Examples
 
@@ -492,7 +546,7 @@ Returns **[String][62]**
 isArray([1,2,3]); //=> true
 ```
 
-Returns **[Boolean][61]** 
+Returns **[Boolean][71]** 
 
 ## toSignificantFigures
 
@@ -507,7 +561,7 @@ toSignificantFigures (2) ("abc"); //=> false
 toSignificantFigures (2) (100.999); //=> "100.99"
 ```
 
-Returns **function (target: [String][62]): [String][62]** False when the target cannot be
+Returns **function (target: [String][72]): [String][72]** False when the target cannot be
   parsed, otherwise the string representation of the number rounded to
   significant figures.
 
@@ -541,114 +595,134 @@ Returns **function (target: [String][62]): [String][62]** False when the target 
 
 [15]: #examples-2
 
-[16]: #add
+[16]: #head
 
 [17]: #parameters-6
 
-[18]: #append
+[18]: #tail
 
 [19]: #parameters-7
 
-[20]: #examples-3
+[20]: #add
 
-[21]: #joinwithcomma
+[21]: #parameters-8
 
-[22]: #parameters-8
+[22]: #append
 
-[23]: #joinwithnewline
+[23]: #parameters-9
 
-[24]: #parameters-9
+[24]: #examples-3
 
-[25]: #removecommas
+[25]: #capitalize
 
 [26]: #parameters-10
 
-[27]: #examples-4
+[27]: #uppercase
 
-[28]: #replacecommawithwhitespace
+[28]: #parameters-11
 
-[29]: #examples-5
+[29]: #joinwithcomma
 
-[30]: #replacestring
+[30]: #parameters-12
 
-[31]: #examples-6
+[31]: #joinwithnewline
 
-[32]: #showeither
+[32]: #parameters-13
 
-[33]: #parameters-11
+[33]: #removecommas
 
-[34]: #examples-7
+[34]: #parameters-14
 
-[35]: #splitcomma
+[35]: #examples-4
 
-[36]: #examples-8
+[36]: #replacecommawithwhitespace
 
-[37]: #splitcommaregex
+[37]: #examples-5
 
-[38]: #examples-9
+[38]: #replacestring
 
-[39]: #splitnewlines
+[39]: #examples-6
 
-[40]: #examples-10
+[40]: #showeither
 
-[41]: #splitspace
+[41]: #parameters-15
 
-[42]: #examples-11
+[42]: #examples-7
 
-[43]: #splitspaceregex
+[43]: #split
 
-[44]: #examples-12
+[44]: #parameters-16
 
-[45]: #splitwhitespace
+[45]: #splitcomma
 
-[46]: #examples-13
+[46]: #examples-8
 
-[47]: #truncatespace
+[47]: #splitcommaregex
 
-[48]: #examples-14
+[48]: #examples-9
 
-[49]: #truncatewhitespace
+[49]: #splitnewlines
 
-[50]: #examples-15
+[50]: #examples-10
 
-[51]: #getprototype
+[51]: #splitspace
 
-[52]: #parameters-12
+[52]: #examples-11
 
-[53]: #examples-16
+[53]: #splitspaceregex
 
-[54]: #isarray
+[54]: #examples-12
 
-[55]: #parameters-13
+[55]: #splitwhitespace
 
-[56]: #examples-17
+[56]: #examples-13
 
-[57]: #tosignificantfigures
+[57]: #truncatespace
 
-[58]: #parameters-14
+[58]: #examples-14
 
-[59]: #examples-18
+[59]: #truncatewhitespace
 
-[60]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+[60]: #examples-15
 
-[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[61]: #getprototype
 
-[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[62]: #parameters-17
 
-[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[63]: #examples-16
 
-[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[64]: #isarray
 
-[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[65]: #parameters-18
 
-[66]: https://sanctuary.js.org/#curry3}
+[66]: #examples-17
 
-[67]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
+[67]: #tosignificantfigures
 
-[68]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
+[68]: #parameters-19
 
-[69]: https://stackoverflow.com/a/7151225/1727232
+[69]: #examples-18
 
-[70]: https://stackoverflow.com/a/1279878/1727232
+[70]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 
-[71]: https://stackoverflow.com/a/1279874/1727232
+[71]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[72]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[73]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[74]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[75]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[76]: https://sanctuary.js.org/#curry3}
+
+[77]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace}
+
+[78]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space
+
+[79]: https://stackoverflow.com/a/7151225/1727232
+
+[80]: https://stackoverflow.com/a/1279878/1727232
+
+[81]: https://stackoverflow.com/a/1279874/1727232
