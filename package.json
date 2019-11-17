@@ -1,6 +1,6 @@
 {
   "name": "bearly-functional",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a repo of functions, some functional, some bearly 🐻",
   "main": "dist/bearly-functional.cjs.js",
   "module": "dist/bearly-functional.esm.js",
@@ -18,11 +18,6 @@
     "doc": "rimraf docs/* & npm run doc:html & npm run doc:md",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
     "doc:md": "documentation build src/index.js -f md -o docs/documentation.md",
-    "prepublishOnly": "npm run test && npm run doc && npm run build",
-    "postpublish": "rimfraf dist/",
-    "preversion": "npm run test",
-    "version": "npm run doc && git add -A docs",
-    "postversion": "git push && git push --tags",
     "release": "np"
   },
   "files": [
