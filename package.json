@@ -12,6 +12,7 @@
     "build": "cross-env BABEL_ENV=build rollup -c",
     "coverage": "npm run test && tap --coverage-report=lcov",
     "test": "tap --reporter=classic",
+    "test:riteway": "riteway -r esm ./src/**/__tests__/**/*.js",
     "test:output-tap": "tap --reporter=tap --no-coverage",
     "test:watch": "tap --reporter=specy --watch",
     "doc": "rimraf docs/* & npm run doc:html & npm run doc:md",
