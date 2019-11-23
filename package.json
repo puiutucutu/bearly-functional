@@ -1,0 +1,55 @@
+{
+  "name": "bearly-functional",
+  "version": "0.0.1",
+  "description": "a repo of functions, some functional, some bearly 🐻",
+  "main": "dist/bearly-functional.cjs.js",
+  "module": "dist/bearly-functional.esm.js",
+  "browser": "dist/bearly-functional.umd.js",
+  "scripts": {
+    "build": "cross-env BABEL_ENV=build rollup -c",
+    "coverage": "yarn run test && tap --coverage-report=lcov",
+    "test": "tap --reporter=classic",
+    "test:riteway": "riteway -r esm ./src/**/__tests__/**/*.js",
+    "test:output-tap": "tap --reporter=tap --no-coverage",
+    "doc": "rimraf docs/* & yarn run doc:html",
+    "doc:html": "documentation build ./src/index.js -f html -o docs",
+    "prepublishOnly": "yarn run test:riteway && yarn run doc && yarn run build",
+    "postpublish": "rimraf dist/",
+    "preversion": "yarn run test",
+    "version": "yarn run doc && git add -A docs",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "core-js": "^3.3.4",
+    "date-fns": "^2.7.0",
+    "sanctuary": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "cross-env": "^6.0.3",
+    "documentation": "^12.1.2",
+    "esm": "^3.2.25",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "riteway": "^6.1.0",
+    "rollup": "^1.25.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "tap": "^14.8.2"
+  },
+  "author": "puiutucutu",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puiutucutu/bearly-functional.git"
+  }
+}
