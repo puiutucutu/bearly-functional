@@ -41,8 +41,8 @@ const dictByKey = key => S.reduce
 
 ## `countOccurrences`
 
-Two implementations - the second one uses the comma return to offer two
- possible return branches on each reduction.
+Two implementations - the second one uses the comma operator to evaluate the
+ incrementing operation on each reduction iteration. 
 
 ```js
 /**
