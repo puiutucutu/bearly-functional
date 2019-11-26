@@ -41,7 +41,7 @@ const dictByKey = key => S.reduce
 
 ## `countOccurrences`
 
-Two implementations - the second one uses the comma operator to evaluate the incrementing operation on each reduction iteration. In other words, for each iteration, it will evaluate `++acc[x] || 1` but only return `acc`. 
+Two implementations - the second one uses the comma operator to evaluate the incrementing operation on each reduction iteration. In other words, for each iteration, `++acc[x] || 1` is evaluated but only `acc` is returned. 
 
 ```js
 /**
