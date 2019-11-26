@@ -1,7 +1,13 @@
-import { countUnique } from "./countUnique";
+import { countOccurrences } from "./countOccurrences";
 import { dictGroupByKey } from "./dictGroupByKey";
 import { dictByKey } from "./dictByKey";
 import { filterFalse } from "./filterFalse";
 import { uniqValuesByKey } from "./uniqValuesByKey";
 
-export { countUnique, dictGroupByKey, dictByKey, filterFalse, uniqValuesByKey };
+export {
+  countOccurrences,
+  dictGroupByKey,
+  dictByKey,
+  filterFalse,
+  uniqValuesByKey
+};
