@@ -1,13 +1,7 @@
-import { countOccurrences } from "./countOccurrences";
-import { dictGroupByKey } from "./dictGroupByKey";
-import { dictByKey } from "./dictByKey";
-import { filterFalse } from "./filterFalse";
-import { uniqValuesByKey } from "./uniqValuesByKey";
-
-export {
-  countOccurrences,
-  dictGroupByKey,
-  dictByKey,
-  filterFalse,
-  uniqValuesByKey
-};
+export { countOccurrences } from "./countOccurrences";
+export { dictGroupByKey } from "./dictGroupByKey";
+export { dictByKey } from "./dictByKey";
+export { filterFalse } from "./filterFalse";
+export { sliceObject } from "./sliceObject";
+export { sortByCountDesc } from "./sortByCountDesc";
+export { uniqValuesByKey } from "./uniqValuesByKey";
