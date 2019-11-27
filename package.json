@@ -1,6 +1,6 @@
 {
   "name": "bearly-functional",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a repo of functions, some functional, some bearly 🐻",
   "main": "dist/bearly-functional.cjs.js",
   "module": "dist/bearly-functional.esm.js",
