@@ -13,7 +13,7 @@
     "test:output-tap": "tap --reporter=tap --no-coverage",
     "doc": "rimraf docs/* & yarn run doc:html",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
-    "prepublishOnly": "yarn run test:riteway && yarn run doc && yarn run build",
+    "prepublishOnly": "yarn run test && yarn run build",
     "postpublish": "rimraf dist/",
     "preversion": "yarn run test",
     "version": "yarn run doc && git add -A docs",

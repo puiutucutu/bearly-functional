@@ -2,10 +2,10 @@
 
 a repo of functions, some functional, some bearly 🐻
 
-- `tap` for unit testing
-- code coverage with `nyc` via `tap`
-- bundling with `rollup` and transpiling with `babel`
-- builds `.cjs`, `.esm` and `.umd` files
+* `riteway` for unit testing
+* code coverage with `nyc`
+* bundling with `rollup` and transpiling with `babel`
+* builds `.cjs`, `.esm` and `.umd` files
 
 ## Docs
 
@@ -15,6 +15,16 @@ https://puiutucutu.github.io/bearly-functional/
 
 ```
 npm install
+```
+
+### Browser 
+
+Grab a `umd` build from → https://www.jsdelivr.com/package/npm/bearly-functional
+
+Browser version uses the `bf` namespace as in:
+
+```js
+bf.first(["a","b","c"]); //=> "a"
 ```
 
 ## Package Scripts

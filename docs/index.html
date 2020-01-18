@@ -226,9 +226,29 @@
               
                 
                 <li><a
+                  href='#first'
+                  class="">
+                  first
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#head'
                   class="">
                   head
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makerangesbetween'
+                  class="">
+                  makeRangesBetween
                   
                 </a>
                 
@@ -309,6 +329,16 @@
                   href='#joinwithnewline'
                   class="">
                   joinWithNewLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#joinwithspace'
+                  class="">
+                  joinWithSpace
                   
                 </a>
                 
@@ -1981,6 +2011,93 @@ style.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='first'>
+      first
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>first</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;T>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(T | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> xs = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+first([]); <span class="hljs-comment">//=&gt; undefined</span>
+
+first(xs); <span class="hljs-comment">//=&gt; "a"</span>
+
+<span class="hljs-keyword">delete</span> xs[<span class="hljs-number">0</span>];
+first(xs); <span class="hljs-comment">//=&gt; "b"</span>
+
+<span class="hljs-keyword">delete</span> xs[<span class="hljs-number">1</span>];
+first(xs); <span class="hljs-comment">//=&gt; "c""</span>
+
+<span class="hljs-keyword">delete</span> xs[<span class="hljs-number">2</span>];
+first(xs); <span class="hljs-comment">//=&gt; undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='head'>
       head
     </h3>
@@ -2031,6 +2148,76 @@ style.</p>
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makerangesbetween'>
+      makeRangesBetween
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>makeRangesBetween(positions: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>positions</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    An array of numbers where each number in the
+array should be greater than the previous number.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>makeRangesBetween([<span class="hljs-number">0</span>]); <span class="hljs-comment">//=&gt; [[0,0]]</span>
+makeRangesBetween([<span class="hljs-number">3</span>,<span class="hljs-number">21</span>,<span class="hljs-number">41</span>,<span class="hljs-number">136</span>]); <span class="hljs-comment">//=&gt; [[0,3], [3,21], [21,41], [41,136]]</span>
+makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">-22</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">-7</span>,<span class="hljs-number">136</span>]); <span class="hljs-comment">//=&gt; [[0,-22], [-22,3], [3,5], [5,-7], [-7,136]]</span></pre>
+    
   
 
   
@@ -2552,6 +2739,74 @@ style.</p>
 
   
     <div class='pre p1 fill-light mt0'>joinWithNewLine</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='joinwithspace'>
+      joinWithSpace
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>joinWithSpace</div>
   
   
 

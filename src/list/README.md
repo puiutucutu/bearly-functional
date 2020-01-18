@@ -53,3 +53,84 @@ function shuffle(xs) {
     .map(([rand, x]) => x);
 }
 ```
+
+## `first`
+
+First, some implementations:
+
+Using function arg array destructuring - downside is the jsdoc block.
+
+```js
+/**
+ * @param {T} x
+ * @param {T[]} xs
+ * @return {T|undefined}
+ */
+const first = ([x, ...xs]) => x;
+```
+
+Using a comma expression to return the last evaluated value. Avoids the jsdoc
+ block issue of the first example.
+
+```js
+/**
+ * @param {T[]} xs
+ * @return {T|undefined}
+ */
+const first = xs => (([x] = xs), x);
+```
+
+The previous two examples are equivalent to this.
+
+```js
+const first = xs => {
+  const [x] = xs;
+  return x;
+};
+```
+
+All implementations above return undefined for sparse arrays
+ wherein the first array element at index 0 has been deleted.
+ 
+```js
+const first = ([x, ...xs]) => x;
+const xs = ["a","b","c"];
+
+first(xs); //=> "a"
+first([]); //=> undefined
+
+delete xs[0];
+first(xs); //=> undefined
+```
+
+This next implementation handles this case.
+
+```js
+/**
+ * @param {T[]} xs
+ * @return {T|undefined}
+ */
+const first = xs => xs.find(x => typeof x !== "undefined");
+
+const xs = [];
+xs[1] = "b";
+xs[2] = "c";
+
+first([]); //=> undefined
+first(xs); //=> "b"
+```
+
+This answer is thinking outside the box by taking the keys of the array.
+
+* https://stackoverflow.com/a/42491188/1727232
+
+```js
+const xs = ["a", "b", "c"];
+delete xs[0];
+
+const keys = Object.keys(xs);
+const x = xs[keys[0]];
+
+console.log(keys);
+console.log(x); //=> "b"
+```

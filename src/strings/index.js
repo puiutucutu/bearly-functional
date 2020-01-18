@@ -2,6 +2,7 @@ import { append } from "./append";
 import { capitalize } from "./capitalize";
 import { joinWithComma } from "./joinWithComma";
 import { joinWithNewLine } from "./joinWithNewLine";
+import { joinWithSpace } from "./joinWithSpace";
 import { removeCommas } from "./removeCommas";
 import { replaceCommaWithWhitespace } from "./replaceCommaWithWhitespace";
 import { replaceString } from "./replaceString";
@@ -21,6 +22,7 @@ export {
   capitalize,
   joinWithComma,
   joinWithNewLine,
+  joinWithSpace,
   removeCommas,
   replaceCommaWithWhitespace,
   replaceString,
