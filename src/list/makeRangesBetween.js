@@ -16,8 +16,7 @@ export function makeRangesBetween(positions) {
     const curr = positions[i];
     const next = positions[i + 1];
 
-    // handles cases when only one index value provided like
-    // `makeRangesBetween([0])`
+    // handles cases when only one index value provided like `makeRangesBetween([0])`
     if (prev === undefined && next === undefined) {
       out.push([curr, curr]);
       continue;
