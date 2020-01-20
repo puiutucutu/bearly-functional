@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>bearly-functional 0.2.0 | Documentation</title>
+  <title>bearly-functional 0.2.1 | Documentation</title>
   <meta name='description' content='a repo of functions, some functional, some bearly 🐻'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>bearly-functional</h3>
-          <div class='mb1'><code>0.2.0</code></div>
+          <div class='mb1'><code>0.2.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -306,9 +306,79 @@
               
                 
                 <li><a
-                  href='#uppercase'
+                  href='#chunkstringbyindices'
                   class="">
-                  uppercase
+                  chunkStringByIndices
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#chunkstringbykeywords'
+                  class="">
+                  chunkStringByKeywords
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findkeyword'
+                  class="">
+                  findKeyword
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findkeywords'
+                  class="">
+                  findKeywords
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#textfragment'
+                  class="">
+                  TextFragment
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getbufferedtextfragmentsaroundkeywords'
+                  class="">
+                  getBufferedTextFragmentsAroundKeywords
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getsurroundingwords'
+                  class="">
+                  getSurroundingWords
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getsurroundingwordsaroundkeywords'
+                  class="">
+                  getSurroundingWordsAroundKeywords
                   
                 </a>
                 
@@ -469,6 +539,16 @@
                   href='#truncatewhitespace'
                   class="">
                   truncateWhitespace
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#uppercase'
+                  class="">
+                  uppercase
                   
                 </a>
                 
@@ -2106,7 +2186,7 @@ first(xs); <span class="hljs-comment">//=&gt; undefined</span></pre>
   </div>
   
 
-  <p>head :: [a] -> a</p>
+  <p>head :: [a] -> [a]</p>
 
     <div class='pre p1 fill-light mt0'>head</div>
   
@@ -2125,7 +2205,7 @@ first(xs); <span class="hljs-comment">//=&gt; undefined</span></pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;T>)</code>
 	    
           </div>
           
@@ -2139,7 +2219,7 @@ first(xs); <span class="hljs-comment">//=&gt; undefined</span></pre>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;T></code>:
         
 
       
@@ -2593,8 +2673,8 @@ makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='uppercase'>
-      uppercase
+    <h3 class='fl m0' id='chunkstringbyindices'>
+      chunkStringByIndices
     </h3>
     
     
@@ -2602,7 +2682,7 @@ makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">
   
 
   
-    <div class='pre p1 fill-light mt0'>uppercase</div>
+    <div class='pre p1 fill-light mt0'>chunkStringByIndices(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, indices: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></div>
   
   
 
@@ -2619,7 +2699,15 @@ makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>indices</span> <code class='quiet'>(any)</code>
 	    
           </div>
           
@@ -2633,7 +2721,7 @@ makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>:
         
 
       
@@ -2642,6 +2730,711 @@ makeRangesBetween([<span class="hljs-number">0</span>,<span class="hljs-number">
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> str = <span class="hljs-string">"The quick brown fox jumps over the lazy dog"</span>;
+<span class="hljs-keyword">const</span> actual = chunkStringByIndices(str, [[<span class="hljs-number">0</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">6</span>]]);
+
+<span class="hljs-keyword">const</span> expected = [
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"The"</span>, <span class="hljs-string">"quick"</span>, <span class="hljs-string">"brown"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"fox"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"jumps"</span>, <span class="hljs-string">"over"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+];
+
+<span class="hljs-keyword">const</span> actual2 = chunkStringByIndices(str, [[<span class="hljs-number">0</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">9</span>]]);
+
+<span class="hljs-keyword">const</span> expected2 = [
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"The"</span>, <span class="hljs-string">"quick"</span>, <span class="hljs-string">"brown"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"fox"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"jumps"</span>, <span class="hljs-string">"over"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"the"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"lazy"</span>, <span class="hljs-string">"dog"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+];</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='chunkstringbykeywords'>
+      chunkStringByKeywords
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Breaks apart a string where keywords are found.</p>
+
+    <div class='pre p1 fill-light mt0'>chunkStringByKeywords(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, keywords: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#textfragment">TextFragment</a>>>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>keywords</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#textfragment">TextFragment</a>>>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> text = <span class="hljs-string">"The quick brown dog jumped over the fox, but why did the dog not bark?"</span>;
+<span class="hljs-keyword">const</span> actual = chunkStringByKeywords(text, [<span class="hljs-string">"brown"</span>, <span class="hljs-string">"dog"</span>]);
+
+<span class="hljs-keyword">const</span> expected = [
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"The"</span>, <span class="hljs-string">"quick"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"brown"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">segment</span>: [], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"dog"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  {
+    <span class="hljs-attr">segment</span>: [<span class="hljs-string">"jumped"</span>, <span class="hljs-string">"over"</span>, <span class="hljs-string">"the"</span>, <span class="hljs-string">"fox,"</span>, <span class="hljs-string">"but"</span>, <span class="hljs-string">"why"</span>, <span class="hljs-string">"did"</span>, <span class="hljs-string">"the"</span>],
+    <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span>
+  },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"dog"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"not"</span>, <span class="hljs-string">"bark?"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+];</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findkeyword'>
+      findKeyword
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Splits the string into an array and finds the indices where the
+keyword is found using a wildcard search on the end of the keyword.</p>
+
+    <div class='pre p1 fill-light mt0'>findKeyword(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, keyword: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>keyword</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></code>:
+        An array containing the array indices (if any) of where
+each keyword was after splitting the string into words.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>findKeyword(<span class="hljs-string">"The quick brown fox jumps over the lazy dog"</span>, <span class="hljs-string">"the"</span>); <span class="hljs-comment">//=&gt; [0,6]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findkeywords'>
+      findKeywords
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Given a string, will perform a wildcard search on the exploded string for
+each supplied keyword and return an array of index positions found for each
+keyword.</p>
+<p>Searching is case insensitive.</p>
+
+    <div class='pre p1 fill-light mt0'>findKeywords(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, keywords: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>keywords</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>></code>:
+        An object containing the keyword and an
+array of numbers representing the index positions of the supplied string
+exploded on whitespace.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> s = <span class="hljs-string">"The quick brown fox jumps over the lazy dog"</span>;
+findKeywords(s, [<span class="hljs-string">"the"</span>,<span class="hljs-string">"dog"</span>]); <span class="hljs-comment">//=&gt; { "the": [0,6], "dog": [8] }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='textfragment'>
+      TextFragment
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>TextFragment</div>
+  
+    <p>
+      Type:
+      {segment: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>, keyword: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getbufferedtextfragmentsaroundkeywords'>
+      getBufferedTextFragmentsAroundKeywords
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>getBufferedTextFragmentsAroundKeywords(text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, keywords: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>, wordBuffer: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#textfragment">TextFragment</a>>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>keywords</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>wordBuffer</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#textfragment">TextFragment</a>>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> text = <span class="hljs-string">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span>;
+<span class="hljs-keyword">const</span> actual = getBufferedTextFragmentsAroundKeywords(
+  text,
+  [<span class="hljs-string">"pleasure"</span>, <span class="hljs-string">"great"</span>, <span class="hljs-string">"responsible"</span>],
+  <span class="hljs-number">3</span>
+);
+
+<span class="hljs-keyword">const</span> expected = {
+  <span class="hljs-attr">pleasure</span>: [
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"idea"</span>, <span class="hljs-string">"of"</span>, <span class="hljs-string">"denouncing"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"and"</span>, <span class="hljs-string">"praising"</span>, <span class="hljs-string">"pain"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"dislikes,"</span>, <span class="hljs-string">"or"</span>, <span class="hljs-string">"avoids"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"itself,"</span>, <span class="hljs-string">"because"</span>, <span class="hljs-string">"it"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"because"</span>, <span class="hljs-string">"it"</span>, <span class="hljs-string">"is"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure,"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"but"</span>, <span class="hljs-string">"because"</span>, <span class="hljs-string">"those"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"how"</span>, <span class="hljs-string">"to"</span>, <span class="hljs-string">"pursue"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"rationally"</span>, <span class="hljs-string">"encounter"</span>, <span class="hljs-string">"consequences"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"him"</span>, <span class="hljs-string">"some"</span>, <span class="hljs-string">"great"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure."</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"To"</span>, <span class="hljs-string">"take"</span>, <span class="hljs-string">"a"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"to"</span>, <span class="hljs-string">"enjoy"</span>, <span class="hljs-string">"a"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"that"</span>, <span class="hljs-string">"has"</span>, <span class="hljs-string">"no"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"produces"</span>, <span class="hljs-string">"no"</span>, <span class="hljs-string">"resultant"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure?"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ]
+  ],
+  <span class="hljs-attr">great</span>: [
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"teachings"</span>, <span class="hljs-string">"of"</span>, <span class="hljs-string">"the"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"great"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"explorer"</span>, <span class="hljs-string">"of"</span>, <span class="hljs-string">"the"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ],
+    [
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"procure"</span>, <span class="hljs-string">"him"</span>, <span class="hljs-string">"some"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"great"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">segment</span>: [<span class="hljs-string">"pleasure."</span>, <span class="hljs-string">"To"</span>, <span class="hljs-string">"take"</span>], <span class="hljs-attr">keyword</span>: <span class="hljs-literal">false</span> }
+    ]
+  ],
+  <span class="hljs-attr">responsible</span>: []
+};</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getsurroundingwords'>
+      getSurroundingWords
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Retrieves a string fragment padded with words around some word positioned at
+index.</p>
+
+    <div class='pre p1 fill-light mt0'>getSurroundingWords(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, numOfWords: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The targeted string.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The array position identifying the desired word once
+the string has been split on whitespace.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numOfWords</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The buffer of words before and after the word as
+identified by 
+<code>index</code>
+.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> words = <span class="hljs-string">"hello world how are you doing today"</span>;
+
+getSurroundingWords(words, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//=&gt; "hello"</span>
+getSurroundingWords(words, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; "hello world"</span>
+getSurroundingWords(words, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; "world how are"</span>
+getSurroundingWords(words, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; "hello world how are you"</span>
+getSurroundingWords(words, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; "hello world how are you doing"</span>
+getSurroundingWords(words, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; "hello world how are you doing today"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getsurroundingwordsaroundkeywords'>
+      getSurroundingWordsAroundKeywords
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>getSurroundingWordsAroundKeywords(s: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, keywords: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>, wordBuffer: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>keywords</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>wordBuffer</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The amount of words around a keyword to return
+for all instances of keyword matches.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>></code>:
+        For each keyword found in the source
+string, returns a text fragment with a word buffer starting from the
+keyword position.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> source = <span class="hljs-string">"The quick brown fox jumps over the lazy dog but, why did the dog not bark at the fox."</span>;
+<span class="hljs-keyword">const</span> textSurroundingKeywords = getSurroundingWordsAroundKeywords(source, [<span class="hljs-string">"dog"</span>,<span class="hljs-string">"lazy"</span>], <span class="hljs-number">2</span>);
+
+<span class="hljs-keyword">const</span> output = {
+  <span class="hljs-attr">dog</span>: [
+    <span class="hljs-string">"the lazy dog but, why"</span>,
+    <span class="hljs-string">"did the dog not bark"</span>
+  ],
+  <span class="hljs-attr">lazy</span>: [
+    <span class="hljs-string">"over the lazy dog but,"</span>
+  ]
+};</pre>
+    
   
 
   
@@ -3125,8 +3918,8 @@ when an empty string or non-string values are supplied for
     
       
       <pre class='p1 overflow-auto round fill-light'>showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-string">"blue"</span>); <span class="hljs-comment">//=&gt; "blue"</span>
-showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-string">""</span>);     <span class="hljs-comment">//=&gt; "n/a"</span>
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-string">" "</span>);    <span class="hljs-comment">//=&gt; " "</span>
+showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-string">""</span>);     <span class="hljs-comment">//=&gt; "n/a"</span>
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-literal">null</span>);   <span class="hljs-comment">//=&gt; "n/a"</span>
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-literal">false</span>);  <span class="hljs-comment">//=&gt; "n/a"</span>
 showEither(<span class="hljs-string">"n/a"</span>)(<span class="hljs-number">0</span>);      <span class="hljs-comment">//=&gt; "n/a"</span></pre>
@@ -3726,6 +4519,74 @@ metacharacter in regex.</p>
       <pre class='p1 overflow-auto round fill-light'>truncateWhitespace (<span class="hljs-string">"hello   world"</span>); <span class="hljs-comment">//=&gt; "hello world"</span>
 truncateWhitespace (<span class="hljs-string">"foo \t \v bar"</span>); <span class="hljs-comment">//=&gt; "foo bar"</span></pre>
     
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='uppercase'>
+      uppercase
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>uppercase</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        
+
+      
+    
+  
+
+  
+
   
 
   
