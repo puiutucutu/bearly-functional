@@ -5,6 +5,7 @@ export { extractHour } from "./extractHour";
 export { extractMonthName } from "./extractMonthName";
 export { extractYear } from "./extractYear";
 export { getDateOneMonthAgo } from "./getDateOneMonthAgo";
+export { getISO8601DatetimeOffsetWithMicrosecondsFromUTC } from "./getISO8601DatetimeOffsetWithMicrosecondsFromUTC";
 export { getISO8601DateWithTimeOffsetFromUTC } from "./getISO8601DateWithTimeOffsetFromUTC";
 export { isValidDateISO } from "./isValidDateISO";
 export { makeDate } from "./makeDate";
