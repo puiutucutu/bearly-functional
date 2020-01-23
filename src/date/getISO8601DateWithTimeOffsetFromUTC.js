@@ -5,6 +5,8 @@ import { format } from "date-fns";
  * @example getISO8601DateWithTimeOffsetFromUTC(); //=> "2007-04-05T12:30-02:00"
  * @see https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators
  */
-export const getISO8601DateWithTimeOffsetFromUTC = () => {
-  return format(new Date(), "yyyy-MM-dd'T'HH:mm:ssxxx");
+export const getISO8601DateWithTimeOffsetFromUTC = (microseconds = false) => {
+  return microseconds
+    ? format(new Date(), "yyyy-MM-dd'T'HH:mm:ssxxx")
+    : format(new Date(), "yyyy-MM-dd'T'HH:mm:ssxxx");
 };
