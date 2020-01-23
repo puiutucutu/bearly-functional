@@ -13,6 +13,7 @@ const babelPlugin = [
 
 module.exports = [
   {
+    external: ["date-fns"],
     input: "src/index.js",
     output: [
       {
@@ -29,6 +30,7 @@ module.exports = [
     plugins: [...babelPlugin, nodeResolve(), commonjs(), json()]
   },
   {
+    external: ["date-fns"],
     input: "src/index.js",
     output: {
       file: pkg.browser,
