@@ -3,6 +3,7 @@ import babel from "rollup-plugin-babel";
 import json from "rollup-plugin-json";
 import nodeResolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
+import builtins from "rollup-plugin-node-builtins";
 import pkg from "./package.json";
 
 const babelPlugin = [
@@ -27,10 +28,9 @@ module.exports = [
         sourcemap: true
       }
     ],
-    plugins: [...babelPlugin, nodeResolve(), commonjs(), json()]
+    plugins: [...babelPlugin, builtins(), nodeResolve(), commonjs(), json()]
   },
   {
-    external: ["date-fns"],
     input: "src/index.js",
     output: {
       file: pkg.browser,
@@ -38,6 +38,13 @@ module.exports = [
       name: "bf",
       sourcemap: true
     },
-    plugins: [...babelPlugin, nodeResolve(), commonjs(), json(), terser()]
+    plugins: [
+      ...babelPlugin,
+      builtins(),
+      nodeResolve(),
+      commonjs(),
+      json(),
+      terser()
+    ]
   }
 ];
