@@ -11,7 +11,7 @@ const persons = [
 
 const result = data.dictByKey("name")(persons);
 const datetime = date.getISO8601DateWithTimeOffsetFromUTC();
-const datetimeWithMicroseconds = date.getISO8601DateWithTimeOffsetFromUTC();
+const datetimeWithMicroseconds = date.getISO8601DateWithTimeOffsetFromUTC(true);
 
 console.log(result);
 console.log(datetime);
