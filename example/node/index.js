@@ -1,4 +1,4 @@
-import { data } from "bearly-functional";
+import { data, dates } from "bearly-functional";
 
 const persons = [
   { id: 1, name: "John" },
@@ -10,5 +10,9 @@ const persons = [
 ];
 
 const result = data.dictByKey("name")(persons);
+const datetime = dates.getISO8601DateWithTimeOffsetFromUTC();
+const datetimeWithMicroseconds = dates.getISO8601DateWithTimeOffsetFromUTC();
 
 console.log(result);
+console.log(datetime);
+console.log(datetimeWithMicroseconds);
