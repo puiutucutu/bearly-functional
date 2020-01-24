@@ -22,9 +22,11 @@
   "files": [
     "/dist"
   ],
+  "peerDependencies": {
+    "date-fns": "^2.7.0"
+  },
   "dependencies": {
     "core-js": "^3.3.4",
-    "date-fns": "^2.7.0",
     "sanctuary": "^2.0.0"
   },
   "devDependencies": {
