@@ -1063,13 +1063,12 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bearly-functional@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/bearly-functional/-/bearly-functional-0.2.2.tgz#d1c6762c58c235d0b888201527274f4c006c6a06"
-  integrity sha512-uxxeypb+rxXBvbpzMAgfJ0sOVqbRtChrraAxRh/hVyvA82mUGiGiiAmqFVZ3Y/0xVVEURl4kfFsDw9/DBMQkYg==
+bearly-functional@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/bearly-functional/-/bearly-functional-0.2.3.tgz#d6cd9de5533e0be7bf374a938dd0a05e17c38d92"
+  integrity sha512-xryzNHRGKnHTG6dk3AupRjErrrKoFX6ISTZvQNYTVef58mN4WgzYUQhqZt6ERrgXO8rB+sgJ83KVF17krVXlyg==
   dependencies:
     core-js "^3.3.4"
-    date-fns "^2.7.0"
     sanctuary "^2.0.0"
 
 binary-extensions@^1.0.0:
@@ -1772,11 +1771,6 @@ data-urls@^1.1.0:
     abab "^2.0.0"
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
-
-date-fns@^2.7.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.9.0.tgz#d0b175a5c37ed5f17b97e2272bbc1fa5aec677d2"
-  integrity sha512-khbFLu/MlzLjEzy9Gh8oY1hNt/Dvxw3J6Rbc28cVoYWQaC1S3YI4xwkF9ZWcjDLscbZlY9hISMr66RFzZagLsA==
 
 deasync@^0.1.14:
   version "0.1.19"
@@ -3026,9 +3020,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
