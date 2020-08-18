@@ -6,6 +6,7 @@
   "module": "dist/bearly-functional.esm.js",
   "browser": "dist/bearly-functional.umd.js",
   "scripts": {
+    "prepare": "npm run build",
     "build": "cross-env BABEL_ENV=build rollup -c",
     "coverage": "yarn run test && tap --coverage-report=lcov",
     "test": "tap --reporter=classic",
