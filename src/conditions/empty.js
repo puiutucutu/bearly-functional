@@ -1,3 +1,4 @@
-const empty = x => !!x; // a -> Boolean
+// empty :: a -> Boolean
+const empty = (x) => !!x;
 
 export { empty };

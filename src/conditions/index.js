@@ -1,6 +1,6 @@
-import { empty } from "./empty";
-import { identity } from "./identity";
-import { isFalsy } from "./isFalsy";
-import { isTruthy } from "./isTruthy";
-
-export { empty, identity, isFalsy, isTruthy };
+export { empty } from "./empty";
+export { is } from "./is";
+export { isArray } from "./isArray";
+export { isNot } from "./isNot";
+export { isObject } from "./isObject";
+export { isString } from "./isString";

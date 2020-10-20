@@ -46,3 +46,7 @@ npm run test
 ```
 npm run coverage
 ```
+
+### Todos
+
+* [ ] extract date fns to own library

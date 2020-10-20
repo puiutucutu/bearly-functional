@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/register": "^7.6.2",
     "cross-env": "^6.0.3",
+    "date-fns": "^2.7.0",
     "documentation": "^12.1.2",
     "esm": "^3.2.25",
     "prettier": "^1.18.2",

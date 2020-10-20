@@ -1,12 +1,12 @@
-import { isTruthy } from "../conditions/isTruthy";
+import { is } from "../conditions";
+import { filter } from "./filter";
 
 /**
  * Removes elements of the array that evaluate to false when coerced to Boolean.
  *
  * filterFalse :: [*] -> [*]
  *
- * @return {Array}
+ * @param {[]} xs
+ * @return {[]}
  */
-const filterFalse = xs => Array.prototype.filter.call(xs, isTruthy);
-
-export { filterFalse };
+export const filterFalse = xs => filter (is) (xs);

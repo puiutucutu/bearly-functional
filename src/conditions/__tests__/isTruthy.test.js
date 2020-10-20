@@ -1,23 +1,23 @@
 import { describe } from "riteway";
-import { isTruthy } from "../isTruthy";
+import { is } from "../is";
 
-describe("isTruthy()", async assert => {
+describe("is", async assert => {
   assert({
     given: "primitives",
     should: "evaluate each primitive to correct boolean value",
     actual:
-      isTruthy({}) === true &&
-      isTruthy([]) === true &&
-      isTruthy(true) === true &&
-      isTruthy(false) === false &&
-      isTruthy(0) === false &&
-      isTruthy("0") === true &&
-      isTruthy("") === false &&
-      isTruthy(``) === false &&
-      isTruthy(null) === false &&
-      isTruthy(undefined) === false &&
-      isTruthy(void 0) === false &&
-      isTruthy(NaN) === false,
+      is({}) === true &&
+      is([]) === true &&
+      is(true) === true &&
+      is(false) === false &&
+      is(0) === false &&
+      is("0") === true &&
+      is("") === false &&
+      is(``) === false &&
+      is(null) === false &&
+      is(undefined) === false &&
+      is(void 0) === false &&
+      is(NaN) === false,
     expected: true
   });
 });

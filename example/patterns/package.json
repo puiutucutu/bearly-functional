@@ -1,0 +1,9 @@
+{
+  "main": "mapping-to-definitions/index.js",
+  "scripts": {
+    "example-one": "node -r esm ./1-mapping-to-definitions.js"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}

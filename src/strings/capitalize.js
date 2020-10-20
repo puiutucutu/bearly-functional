@@ -1,5 +1,5 @@
 import S from "sanctuary";
-import { uppercase } from "./uppercase";
+import { upperCase } from "./upperCase";
 import { head, tail } from '../list'
 import { split } from './split'
 
@@ -8,7 +8,7 @@ import { split } from './split'
  * @return {String}
  */
 const capitalize = x => S.joinWith("") ([
-  ...uppercase (head (split (x))),
+  ...upperCase (head (split (x))),
   ...tail (split (x))
 ]);
 
