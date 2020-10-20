@@ -19,7 +19,6 @@ export { replaceCommaWithWhitespace } from "./replaceCommaWithWhitespace";
 export { replaceNonNumericChars } from "./replaceNonNumericChars";
 export { replaceNonNumericDashChars } from "./replaceNonNumericDashChars";
 export { replaceString } from "./replaceString";
-export { showEither } from "./showEither";
 export { split } from "./split";
 export { splitAt } from "./splitAt";
 export { splitComma } from "./splitComma";
