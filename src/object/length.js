@@ -1,4 +1,4 @@
-import { isObject } from "../conditions/isObject.js";
+import { isObject } from "../conditions";
 import { keys } from "./keys.js";
 
 export const length = (x) => {
