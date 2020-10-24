@@ -1,5 +1,7 @@
 import { data, date } from "bearly-functional";
 
+const log = x => console.log(x);
+
 const persons = [
   { id: 1, name: "John" },
   { id: 2, name: "James" },
@@ -10,9 +12,10 @@ const persons = [
 ];
 
 const result = data.dictByKey("name")(persons);
+log(result);
+
+// using fn which relies on `date-fns` as peer dependency
 const datetime = date.getISO8601DateWithTimeOffsetFromUTC();
 const datetimeWithMicroseconds = date.getISO8601DateWithTimeOffsetFromUTC(true);
-
-console.log(result);
-console.log(datetime);
-console.log(datetimeWithMicroseconds);
+log(datetime);
+log(datetimeWithMicroseconds);
