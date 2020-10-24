@@ -8,7 +8,7 @@ describe("joinWithNewLine()", async assert => {
     given: "array of strings",
     should,
     actual: joinWithNewLine(["hello", "world"]),
-    expected: "hello\r\nworld"
+    expected: "hello\nworld"
   });
 
   assert({
