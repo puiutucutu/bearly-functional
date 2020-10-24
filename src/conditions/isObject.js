@@ -1,4 +1,4 @@
-import { prototype } from "../utils";
+import { PROTOTYPES, prototype } from "../utils";
 
 /**
  * @param {*} x
