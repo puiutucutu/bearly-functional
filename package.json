@@ -1,6 +1,6 @@
 {
   "name": "bearly-functional",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "a repo of functions, some functional, some bearly 🐻",
   "main": "dist/bearly-functional.cjs.js",
   "module": "dist/bearly-functional.esm.js",
@@ -13,42 +13,41 @@
     "test:output-tap": "tap --reporter=tap --no-coverage",
     "doc": "rimraf docs/* & yarn run doc:html",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
-    "prepublishOnly": "yarn run test && yarn run build",
-    "prepare": "npm run build",
-    "postpublish": "rimraf dist/",
     "preversion": "yarn run test",
     "version": "yarn run doc && git add -A docs",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "yarn run test && yarn run build",
+    "postpublish": "rimraf dist/"
   },
   "files": [
     "/dist"
   ],
   "peerDependencies": {
-    "date-fns": "^2.7.0"
+    "date-fns": "^2.16.1"
   },
   "dependencies": {
-    "core-js": "^3.3.4",
-    "sanctuary": "^2.0.0"
+    "core-js": "^3.6.5",
+    "sanctuary": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/register": "^7.6.2",
-    "cross-env": "^6.0.3",
-    "date-fns": "^2.7.0",
-    "documentation": "^12.1.2",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "cross-env": "^7.0.2",
+    "date-fns": "^2.16.1",
+    "documentation": "^13.0.2",
     "esm": "^3.2.25",
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
-    "riteway": "^6.1.0",
-    "rollup": "^1.25.2",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2",
-    "tap": "^14.8.2"
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "riteway": "^6.2.1",
+    "rollup": "^2.32.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tap": "^14.10.8"
   },
   "author": "puiutucutu",
   "license": "ISC",
