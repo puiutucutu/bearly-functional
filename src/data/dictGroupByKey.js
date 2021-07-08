@@ -1,4 +1,4 @@
-import S from "sanctuary";
+import { reduce } from "../list"
 
 /**
  * Takes a `key` and returns a function that expects an array of objects
@@ -42,7 +42,7 @@ import S from "sanctuary";
  * //
  *
  */
-const dictGroupByKey = key => S.reduce
+const dictGroupByKey = key => reduce
   (acc => x => ({ ...acc, [x[key]]: acc[x[key]] ? [...acc[x[key]], x] : [x] }))
   ({})
 ;

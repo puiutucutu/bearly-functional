@@ -1,4 +1,4 @@
-import S from "sanctuary";
+import { reduce } from "../list"
 
 /**
  * Takes a `key`, returns a function that expects an array of objects, finally
@@ -23,7 +23,7 @@ import S from "sanctuary";
  * dictByKey ("name") (persons); //=> { John: true, James: true, Jack: true }
  *
  */
-const dictByKey = key => S.reduce
+const dictByKey = key => reduce
   (acc => x => ({ ...acc, [x[key]]: true }))
   ({})
 ;
