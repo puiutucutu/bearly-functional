@@ -7,16 +7,16 @@
   "browser": "dist/bearly-functional.umd.js",
   "scripts": {
     "build": "cross-env BABEL_ENV=build rollup -c",
-    "coverage": "yarn run test && tap --coverage-report=lcov",
+    "coverage": "npm run test && tap --coverage-report=lcov",
     "test": "tap --reporter=classic",
     "test:riteway": "riteway -r esm ./src/**/__tests__/**/*.js",
     "test:output-tap": "tap --reporter=tap --no-coverage",
-    "doc": "rimraf docs/* & yarn run doc:html",
+    "doc": "rimraf docs/* & npm run doc:html",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
-    "preversion": "yarn run test",
-    "version": "yarn run doc && git add -A docs",
+    "preversion": "npm run test",
+    "version": "npm run doc && git add -A docs",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "yarn run test && yarn run build",
+    "prepublishOnly": "npm run test && npm run build",
     "postpublish": "rimraf dist/"
   },
   "files": [
