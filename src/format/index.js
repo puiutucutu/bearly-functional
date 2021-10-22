@@ -1,3 +1,2 @@
-import { castNullToNullString } from "./castNullToNullString";
-
-export { castNullToNullString };
+export { castNullToEmptyString } from "./castNullToEmptyString";
+export { castNullToNullString } from "./castNullToNullString";
