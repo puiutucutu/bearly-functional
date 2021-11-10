@@ -1,6 +1,7 @@
 export { composeThree } from "./composeThree";
 export { composeTwo } from "./composeTwo";
 export { concat } from "./concat";
+export { curryThree } from "./curryThree";
 export { first } from "./first";
 export { flatMap } from "./flatMap";
 export { flatten } from "./flatten";
