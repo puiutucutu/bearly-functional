@@ -1,3 +1,5 @@
+import { reduce } from "../list"
+
 /**
  * @param {Object} defMap
  * @return {function(obj: Object): Object}
@@ -18,3 +20,10 @@ const alternate = (defMap) => (obj) => {
   Object.entries(defMap).forEach(([k, v]) => (next[v] = obj[k]));
   return next;
 };
+
+const alternateReducer = (defMap) => (obj) =>
+  reduce
+  ((acc) => ([key, value]) => (acc[value] = obj[key], acc))
+  ({})
+  (Object.entries(defMap))
+;
