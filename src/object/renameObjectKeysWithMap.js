@@ -1,0 +1,18 @@
+/**
+ * @param {Map<String, String>} defMap
+ * @return {function(obj: Object): Object}
+ * @example
+ *
+ * const defMap = new Map();
+ * defMap.set("CAN", "Canada");
+ * defMap.set("USA", "United States of America");
+ *
+ * const defined = renameObjectKeys (defMap) ({ CAN: 1867, USA: 1776 }); //=> { "Canada": 1867, "United States of America": 1776 }
+ */
+export const renameObjectKeys = (defMap) => (obj) => {
+  const next = {};
+  Map.prototype.forEach.call(defMap, function (v, k) {
+    next[v] = obj[k];
+  });
+  return next;
+};
