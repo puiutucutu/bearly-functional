@@ -1,3 +1,5 @@
+import { reduce } from "../list";
+
 /**
  * @param {{k: string, v: string}} defMap
  * @return {function(obj: Object): Object}
@@ -14,3 +16,10 @@ export const renameObjectKeys = (defMap) => (obj) => {
   Object.entries(defMap).forEach(([k, v]) => (next[v] = obj[k]));
   return next;
 };
+
+const alternate = (defMap) => (obj) =>
+  reduce
+  ((acc) => ([key, value]) => (acc[value] = obj[key], acc))
+  ({})
+  (Object.entries(defMap))
+;
