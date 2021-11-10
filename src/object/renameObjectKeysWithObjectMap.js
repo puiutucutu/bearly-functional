@@ -16,4 +16,5 @@ export const renameObjectKeysWithObjectMap = (defMap) => (obj) => {
 const alternate = (defMap) => (obj) => {
   const next = {};
   Object.entries(defMap).forEach(([k, v]) => (next[v] = obj[k]));
+  return next;
 };
