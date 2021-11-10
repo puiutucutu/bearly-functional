@@ -19,7 +19,7 @@ export const renameObjectKeys = (defMap) => (obj) => {
 
 const alternate = (defMap) => (obj) =>
   reduce
-  ((acc) => ([key, value]) => (acc[value] = obj[key], acc))
-  ({})
-  (Object.entries(defMap))
-;
+    ((acc) => ([key, value]) => (acc[value] = obj[key], acc))
+    ({})
+    (Object.entries(defMap))
+  ;
