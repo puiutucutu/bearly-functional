@@ -18,7 +18,6 @@ import { renameObjectKeysWithObjectMap } from "./renameObjectKeysWithObjectMap";
  * defMap.set("USA", "United States of America");
  *
  * const defined = renameObjectKeysWithMap (defMap) ({ CAN: 1867, USA: 1776 }); //=> { "Canada": 1867, "United States of America": 1776 }
- *
  */
 export const renameObjectKeys = (defMap) => (obj) => {
   if (prototype(defMap) === PROTOTYPES.MAP) {
