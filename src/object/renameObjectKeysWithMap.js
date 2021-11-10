@@ -9,7 +9,7 @@
  *
  * const defined = renameObjectKeys (defMap) ({ CAN: 1867, USA: 1776 }); //=> { "Canada": 1867, "United States of America": 1776 }
  */
-export const renameObjectKeys = (defMap) => (obj) => {
+export const renameObjectKeysWithMap = (defMap) => (obj) => {
   const next = {};
   for (const [key, value] of Map.prototype.entries.call(defMap)) {
     next[value] = obj[key];
