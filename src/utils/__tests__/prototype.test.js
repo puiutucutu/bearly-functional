@@ -9,6 +9,7 @@ describe("prototype", async (assert) => {
     actual:
       prototype({}) === PROTOTYPES.OBJECT &&
       prototype([]) === PROTOTYPES.ARRAY &&
+      prototype(new Map()) === PROTOTYPES.MAP &&
       prototype(7) === PROTOTYPES.NUMBER &&
       prototype("") === PROTOTYPES.STRING &&
       prototype(true) === PROTOTYPES.BOOLEAN &&

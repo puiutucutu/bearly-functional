@@ -5,6 +5,7 @@
  *
  * prototype({});        //=> "[object Object]"
  * prototype([]);        //=> "[object Array]"
+ * prototype(new Map()); //=> "[object Map]"
  * prototype(7);         //=> "[object Number]"
  * prototype("");        //=> "[object String]"
  * prototype(true);      //=> "[object Boolean]"
