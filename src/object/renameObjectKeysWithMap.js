@@ -11,8 +11,16 @@
  */
 export const renameObjectKeys = (defMap) => (obj) => {
   const next = {};
-  Map.prototype.forEach.call(defMap, function (v, k) {
-    next[v] = obj[k];
+  for (const [key, value] of Map.prototype.entries.call(defMap)) {
+    next[value] = obj[key];
+  }
+  return next;
+};
+
+const alternate = (defMap) => (obj) => {
+  const next = {};
+  Map.prototype.forEach.call(defMap, function (value, key) {
+    next[value] = obj[key];
   });
   return next;
 };
