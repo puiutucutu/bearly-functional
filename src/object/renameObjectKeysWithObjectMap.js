@@ -1,4 +1,4 @@
-import { reduce } from "../list"
+import { reduce } from "../list";
 
 /**
  * @param {Object} defMap
