@@ -16,7 +16,7 @@
     "preversion": "npm run test",
     "version": "npm run doc && git add -A docs",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run build",
     "postpublish": "rimraf dist/"
   },
   "files": [
