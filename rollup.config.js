@@ -29,15 +29,5 @@ module.exports = [
       }
     ],
     plugins: [...babelPlugin, nodeResolve(), commonjs(), json()]
-  },
-  {
-    input: "src/index.js",
-    output: {
-      file: pkg.browser,
-      format: "umd",
-      name: "bf",
-      sourcemap: true
-    },
-    plugins: [...babelPlugin, nodeResolve(), commonjs(), json(), terser()]
   }
 ];
